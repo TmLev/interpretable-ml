@@ -6,7 +6,7 @@ RUN pip install pipenv
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE 1
 
-# set work directory
+# set working directory
 WORKDIR /app
 
 # install dependencies using cache for faster build
@@ -16,3 +16,6 @@ RUN pipenv install --system --deploy
 
 # copy everything else
 ADD . .
+
+# run server
+CMD ["python", "app.py"]
