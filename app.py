@@ -1,12 +1,16 @@
 # -*- coding: utf-8 -*-
 
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+
+import layout
 
 
-external_scripts = ["https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"]
-external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
+external_scripts = [
+    "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML",  # MathJax for TeX
+]
+external_stylesheets = [
+    "https://codepen.io/chriddyp/pen/bWLwgP.css"  # default Dash stylesheet
+]
 
 app = dash.Dash(
     __name__,
@@ -14,11 +18,7 @@ app = dash.Dash(
     external_stylesheets=external_stylesheets,
 )
 
-app.layout = html.Div(
-    children=[
-        html.Div(children="$$x = 1$$"),
-    ],
-)
+app.layout = layout.get_app_layout()
 
 if __name__ == "__main__":
     app.run_server(
