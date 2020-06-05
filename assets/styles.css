@@ -9,6 +9,14 @@ body {
     color: #5d6063;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 ul, ol {
     padding-left: 20px;
     list-style-position: outside;
