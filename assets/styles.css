@@ -9,7 +9,7 @@ body {
     color: #5d6063;
 }
 
-ul {
+ul, ol {
     padding-left: 20px;
     list-style-position: outside;
 }
@@ -64,19 +64,13 @@ details {
 }
 
 .linre-container {
-    width: 700px;
     display: flex;
+    flex-direction: row;
 }
 
 .linre-image {
     max-width: 50%;
-    display: flex;
-    flex: 1 0 auto;
 }
-
-/*.emo-image {*/
-/*    display: flex;*/
-/*}*/
 
 img {
     max-width: 100%;
