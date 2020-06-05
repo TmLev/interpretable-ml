@@ -64,10 +64,15 @@ details {
 }
 
 .linre-image {
+    max-width: 50%;
     display: flex;
     flex: 1 1 auto;
 }
 
+/*.emo-image {*/
+/*    display: flex;*/
+/*}*/
+
 img {
-    max-width: 50%;
+    max-width: 100%;
 }
