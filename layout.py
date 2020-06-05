@@ -224,8 +224,6 @@ def _get_article():
             ]),
         ], className="content-wrapper"), className="content"),
 
-        html.Iframe(src="assets/lime-atheists.html", className="lime-page"),
-
         html.Div(html.Div([
             html.H3("Shapley Values"),
             html.P(
@@ -389,8 +387,6 @@ def _get_article():
                 " то можно применять Lime, но делать это стоит осторожно."
             ),
         ], className="content-wrapper"), className="content"),
-
-        html.Iframe(src="assets/shap-atheists.html", className="shap-page"),
     ]
 
     return sections

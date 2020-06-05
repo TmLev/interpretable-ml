@@ -33,35 +33,16 @@ details {
     margin-bottom: 15px;
 }
 
-/*details >*/
-
-
-/* Lime & SHAP */
-.lime-page,
-.shap-page {
-    display: block;
-    max-width: 700px;
-}
-
-.lime-page {
-    height: 250px;
-}
-
-.shap-page {
-    height: 150px;
-}
-
-
-/* Page */
-.logo {
-    height: 50px;
-}
-
 .article-header {
-    display: block;
-    justify-content: center;
+    margin-top: 50px;
+    border-bottom: 2px solid #EAEDF0;
+    display: flex;
     align-items: center;
-    /*flex-direction: column;*/
+    flex-direction: column;
+}
+
+.article-header > h1, p {
+    width: 700px;
 }
 
 .content {
