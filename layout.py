@@ -499,6 +499,20 @@ def _get_article(app):
                 " Проверим, как это сработает на следующем примере."
             ),
             html.Img(src=app.get_asset_url("self-lime-4.png"), className="self-lime-4"),
+            html.P(
+                "Теперь попробуем сгенерировать данные посложнее."
+            ),
+            html.Img(src=app.get_asset_url("self-lime-5.png"), className="self-lime-5"),
+            html.P(
+                "Сравним с LIME'ом."
+            ),
+            html.Img(src=app.get_asset_url("self-lime-6.png"), className="self-lime-6"),
+            html.P(
+                "Пожалуй, у LIME'а получилось лучше, чем у новой идеи."
+                " Возможно, поможет изменить функцию перехода от расстояния к близости,"
+                " но тогда это будет слишком похоже на сам LIME."
+                " В целом, было ожидаемо, что для локально обоснования не надо смотреть на весь датасет, но попробовать хотелось :)"
+            )
         ], className="content-wrapper"), className="content"),
 
     ]
