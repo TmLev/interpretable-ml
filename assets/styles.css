@@ -9,7 +9,7 @@ body {
     color: #5d6063;
 }
 
-h3, summary, p {
+h3, summary, p, img {
     padding-bottom: 10px;
 }
 
@@ -58,3 +58,16 @@ details {
     margin-right: auto;
 }
 
+.linre-container {
+    width: 700px;
+    display: flex;
+}
+
+.linre-image {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+img {
+    max-width: 50%;
+}

@@ -17,7 +17,7 @@ def _get_page_header():
     return header
 
 
-def _get_article():
+def _get_article(app):
     sections = [
         html.Div(html.Div([
             html.H3("Одна ошибка – (не) страшно!"),
@@ -85,7 +85,17 @@ def _get_article():
                 " можно, посмотрев на вес признака, "
                 " а оценить его вклад – при помощи произведения веса на само значение."
             ),
-            # html.Img(src="assets/plots/linear-regr-admissions"),
+            html.P(
+                " На графиках ниже изображены зависимости между данными абитуриентов,"
+                " подавших заявки в зарубежные университеты."
+                " Видно, что линейная регрессия выделила наиболее важным признаком CGPA, "
+                " что соответствует действительности – ведь у этого параметра наибольшая корреляция"
+                " с целевой переменной (в данном случае – вероятностью поступления)."
+            ),
+            html.Div([
+                html.Img(src=app.get_asset_url("linre-weights.png"), className="linre-image"),
+                html.Img(src=app.get_asset_url("linre-corr.png"), className="linre-image"),
+            ], className="linre-container"),
             html.P(
                 " Тут могут возникать проблемы: если два признака коррелируют,"
                 " то первый может забрать себе всю славу и большой вес,"
@@ -373,10 +383,10 @@ def _get_article():
     return sections
 
 
-def get_app_layout():
+def get_app_layout(app):
     layout = html.Div([
         _get_page_header(),
-        *_get_article(),
+        *_get_article(app),
     ], className="page")
 
     return layout

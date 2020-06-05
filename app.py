@@ -19,7 +19,7 @@ app = dash.Dash(
 )
 
 app.title = "Interpretable Machine Learning"
-app.layout = layout.get_app_layout()
+app.layout = layout.get_app_layout(app)
 
 if __name__ == "__main__":
     app.run_server(
