@@ -17,25 +17,6 @@ def _get_page_header():
     return header
 
 
-def _get_page_footer():
-    footer = html.Footer([
-    ], className="page-footer")
-
-    return footer
-
-
-def _get_sidenav():
-    sidenav = html.Div([
-        html.A("123", href=""),
-        html.A("321", href=""),
-        html.A(href=""),
-        html.A(href=""),
-        html.A(href=""),
-    ], className="sidenav")
-
-    return sidenav
-
-
 def _get_article():
     sections = [
         html.Div(html.Div([
@@ -396,7 +377,6 @@ def get_app_layout():
     layout = html.Div([
         _get_page_header(),
         *_get_article(),
-        _get_page_footer(),
     ], className="page")
 
     return layout

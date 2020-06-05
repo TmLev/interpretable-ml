@@ -18,6 +18,7 @@ app = dash.Dash(
     external_stylesheets=external_stylesheets,
 )
 
+app.title = "Interpretable Machine Learning"
 app.layout = layout.get_app_layout()
 
 if __name__ == "__main__":
